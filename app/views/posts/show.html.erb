@@ -1,0 +1,99 @@
+<%= render 'shared/nav' %>
+
+<h1>JavaScript Calculator</h1>
+<div class="jumbotron">
+  <div class="container text-center">
+    <h2>Do Some Maths</h2>
+  </div>
+</div>
+
+<div class="container bg-3 text-center">
+  <div class="row">
+    <div id='clear' class="col-xs-2 col-sm-offset-1" onclick="myFunction(123)">
+      C
+    </div>
+    <div id='equal' class="col-xs-2 col-sm-offset-1">
+      =
+    </div>
+    <div id='mutiply' class="col-xs-2 col-sm-offset-1" onclick="myFunction('*')">
+      *
+    </div>
+    <div id='divide' class="col-xs-2 col-sm-offset-1" onclick="myFunction('/')">
+      /
+    </div>
+  </div>
+</div><br>
+
+<div class="container bg-3 text-center">
+  <div class="row">
+    <div id='7' class="col-xs-2 col-sm-offset-1" onclick="myFunction(7)">
+      7
+    </div>
+    <div id='8' class="col-xs-2 col-sm-offset-1" onclick="myFunction(8)">
+      8
+    </div>
+    <div id='9' class="col-xs-2 col-sm-offset-1" onclick="myFunction(9)">
+      9
+    </div>
+    <div id='minus' class="col-xs-2 col-sm-offset-1" onclick="myFunction('-')">
+      -
+    </div>
+  </div>
+</div><br>
+
+<div class="container bg-3 text-center">
+  <div class="row">
+    <div id='4' class="col-xs-2 col-sm-offset-1" onclick="myFunction(4)">
+      4
+    </div>
+    <div id='5' class="col-xs-2 col-sm-offset-1" onclick="myFunction(5)">
+      5
+    </div>
+    <div id='6' class="col-xs-2 col-sm-offset-1" onclick="myFunction(6)">
+      6
+    </div>
+    <div id='plus' class="col-xs-2 col-sm-offset-1" onclick="myFunction('+')">
+      +
+    </div>
+  </div>
+</div><br>
+
+<div class="container bg-3 text-center">
+  <div class="row">
+    <div id='1' class="col-xs-2 col-sm-offset-1" onclick="myFunction(1)">
+      1
+    </div>
+    <div id='2' class="col-xs-2 col-sm-offset-1" onclick="myFunction(2)">
+      2
+    </div>
+    <div id='3' class="col-xs-2 col-sm-offset-1" onclick="myFunction(3)">
+      3
+    </div>
+    <div id='0' class="col-xs-2 col-sm-offset-1" onclick="myFunction(0)">
+      0
+    </div>
+  </div>
+</div><br><br>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+
+
+
+<script>
+  // JAVASCRIPT HERE
+  var ddisplay=document.querySelector(".jumbotron h2");
+    var array=[]
+    var re = /,/gi;
+  function myFunction(id) {
+    if (id===123){
+      array=[]
+      ddisplay.textContent="";
+    } else{
+        array.push(id);
+        ddisplay.textContent=array.join().replace(re," ");
+    }
+  }
+</script>
