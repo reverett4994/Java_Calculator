@@ -1,27 +1,84 @@
-<p id="notice"><%= notice %></p>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
 
-<h1>Listing Posts</h1>
+      <%= link_to 'Purely JavaScript Calculator', post_path(1),class:"navbar-brand" %>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'Calculator', post_path(1) %></li>
+        <li class="active"><%= link_to 'About', posts_path %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"onclick="myFunction(123)"><span class="glyphicon glyphicon-refresh"></span> Clear</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="jumbotron">
+  <h1>About The Calculator</h1><br>
+  <p>I Built This Calculator to Help Better My Understanding of JavaScript!</p>
+  <p>It Is Also Using Twitter Bootstrap and Running Rails In The Backend</p>
+  <p><a class="btn btn-primary btn-lg" href="posts/1" role="button"><span class="glyphicon glyphicon-home"></span> Go Back to Calculator</a></p>
+</div>
+<div id="carousel_wrapper">
+  <div class="owl-carousel">
+    <div> <%=image_tag("78036208_XS.jpg", alt: "Example Image")%> </div>
+    <div> <%=image_tag("calculator_photo.jpg", alt: "Example Image")%> </div>
+    <div> <%=image_tag("calculators-tile.jpg", alt: "Example Image")%> </div>
+    <div> <%=image_tag("free_19090424.jpg", alt: "Example Image")%> </div>
+    <div> <%=image_tag("cal.jpg", alt: "Example Image")%> </div>
+    <div> <%=image_tag("reverse-stock-split-math-300x200.jpg", alt: "Example Image")%> </div>
+    <div> <%=image_tag("sat-calculator-programs-300x200.jpg", alt: "Example Image")%> </div>
+  </div>
+</div>
+<div class="container bg-3">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Sample JavaScript Code</h3>
+    </div>
+    <div class="panel-body">
+      var ddisplay=document.querySelector(".jumbotron h2");<br>
+        var array=[]<br>
+        var re = /,/gi;<br>
+      function myFunction(id) {<br>
+        if (id===123){<br>
+          array=[]<br>
+          ddisplay.textContent="Do Some Maths";<br>
+        } else if (id===345) {<br>
 
-<br>
+          ddisplay.textContent=eval(array.join().replace(re,""));<br>
+          array[0]=eval(array.join().replace(re,""));<br>
+          array.length=1;<br>
+        } else if (id===999) {<br>
+          array.pop();<br>
+          ddisplay.textContent=array.join().replace(re,"");<br>
+        } else{<br>
+            array.push(id);<br>
+            ddisplay.textContent=array.join().replace(re,"");<br>
+        }<br>
+      } <br>   </div>
+  </div>
+</div>
 
-<%= link_to 'New Post', new_post_path %>
+<footer class="container-fluid">
+  <p>JavaScript Calculator</p>
+</footer>
+<script>
+  // CAN CALL PLUG IN HERE!!!
+  $(".owl-carousel").owlCarousel({
+
+    autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+    items : 3,
+    itemsDesktop : [1199,3],
+    itemsDesktopSmall : [979,3]
+});
+</script>

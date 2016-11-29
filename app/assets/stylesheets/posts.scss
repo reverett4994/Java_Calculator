@@ -20,8 +20,31 @@ h1{
 
 }
 .col-xs-2 {
-  background-color: pink;
+  background-color: #428bca;
+  color: white;
   font-size: 30px;
   padding: 20px;
   border: .05em solid black;
 }
+.col-xs-2:hover{
+  background-color: #2d6a9f;
+}
+.col-xs-5 {
+  background-color: #428bca;
+  color: white;
+  font-size: 30px;
+  padding: 20px;
+  border: .05em solid black;
+}
+.col-xs-5:hover{
+  background-color: #2d6a9f;
+}
+
+    #carousel_wrapper div{
+      margin: 3px;
+    }
+    #carousel_wrapper div img{
+      display: block;
+      width: 100%;
+      height: auto;
+    }

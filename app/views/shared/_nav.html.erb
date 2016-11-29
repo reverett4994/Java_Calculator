@@ -11,12 +11,10 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Calculator</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><%= link_to 'About', posts_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-refresh"></span> Clear</a></li>
+        <li><a href="#"onclick="myFunction(123)"><span class="glyphicon glyphicon-refresh"></span> Clear</a></li>
       </ul>
     </div>
   </div>
