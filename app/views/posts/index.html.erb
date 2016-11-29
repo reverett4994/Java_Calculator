@@ -45,26 +45,29 @@
       <h3 class="panel-title">Sample JavaScript Code</h3>
     </div>
     <div class="panel-body">
-      var ddisplay=document.querySelector(".jumbotron h2");<br>
-        var array=[]<br>
-        var re = /,/gi;<br>
-      function myFunction(id) {<br>
-        if (id===123){<br>
-          array=[]<br>
-          ddisplay.textContent="Do Some Maths";<br>
-        } else if (id===345) {<br>
+      <pre>
+      var ddisplay=document.querySelector(".jumbotron h2");
+        var array=[]
+        var re = /,/gi;
+      function myFunction(id) {
+        if (id===123){
+          array=[]
+          ddisplay.textContent="Do Some Maths";
+        } else if (id===345) {
 
-          ddisplay.textContent=eval(array.join().replace(re,""));<br>
-          array[0]=eval(array.join().replace(re,""));<br>
-          array.length=1;<br>
-        } else if (id===999) {<br>
-          array.pop();<br>
-          ddisplay.textContent=array.join().replace(re,"");<br>
-        } else{<br>
-            array.push(id);<br>
-            ddisplay.textContent=array.join().replace(re,"");<br>
-        }<br>
-      } <br>   </div>
+          ddisplay.textContent=eval(array.join().replace(re,""));
+          array[0]=eval(array.join().replace(re,""));
+          array.length=1;
+        } else if (id===999) {
+          array.pop();
+          ddisplay.textContent=array.join().replace(re,"");
+        } else{
+            array.push(id);
+            ddisplay.textContent=array.join().replace(re,"");
+        }
+      }
+    </pre>
+    </div>
   </div>
 </div>
 
